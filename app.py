@@ -24,7 +24,7 @@ def main():
         layout="centered",
         initial_sidebar_state="auto",
     )
-    st.title("Heart Disease Prediction Web App")
+    st.title("Diseases Predictions Web App")
     st.sidebar.title("Select Disease")
 
     disease=st.sidebar.selectbox('select disease',['Heart Disease','Diabetes','liver Disease'])
@@ -67,8 +67,10 @@ def main():
             st.subheader("Prediction")
             if prediction[0] == 0:
                 st.success("No heart disease detected. You are healthy!")
+                st.image("healthy.jpg",width=400, caption="Healthy")
             else:
                 st.warning("Heart problem detected. Please consult with a doctor.")
+                st.image("doctor_consulant.jpg",width=400, caption="Disease Detected")
     
 
     elif disease=="Diabetes":
@@ -106,8 +108,10 @@ def main():
             st.subheader("Diabetes Prediction")
             if diabetes_prediction[0] == 0:
                 st.success("No diabetes detected. You are healthy!")
+                st.image("healthy.jpg",width=400, caption="Healthy")
             else:
                 st.warning("Diabetes detected. Please consult with a doctor.")
+                st.image("doctor_consulant.jpg",width=400, caption="Disease Detected")
 
     
     elif disease=="liver Disease":
@@ -141,8 +145,12 @@ def main():
             st.subheader("Liver Disease Prediction")
             if liver_prediction[0] == 0:
                 st.success("No Liver Disease detected. You are healthy!")
+                st.image("healthy.jpg",width=400, caption="Healthy")
             else:
                 st.warning("Liver Disease detected. Please consult with a doctor.")
+                st.image("doctor_consulant.jpg",width=400, caption="Disease Detected")
+
+    
 
     
 
